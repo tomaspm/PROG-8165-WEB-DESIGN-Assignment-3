@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+<TITLE>Alphatech</TITLE>
+  
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+	<link rel="stylesheet" href="styles/trans.css">
+<link rel="stylesheet" href="styles/dash.css">
+   	<title>Alphatech</title>
+	  <script type="text/javascript">
+
+var txt = ""+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+function testResults (form) {
+var dt = document.getElementById("frm1").elements.namedItem("dt").value;
+ txt=txt+dt+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+ var dec = document.getElementById("frm1").elements.namedItem("descp").value;
+ txt=txt+dec+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+ var ct = document.getElementById("frm1").elements.namedItem("cat").value;
+ txt=txt+ct+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+ var am = document.getElementById("frm1").elements.namedItem("amt").value;
+if (ct =="Debit") {
+    am=-am;
+}
+ txt=txt+"$"+"&nbsp"+am+"<br>"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
+localStorage.setItem('trans', JSON.stringify(txt));
+
+document.getElementById("frm1").elements.namedItem("dt").value="";
+var dec = document.getElementById("frm1").elements.namedItem("descp").value="";
+ var ct = document.getElementById("frm1").elements.namedItem("cat").value="Transaction Mode";
+document.getElementById("frm1").elements.namedItem("amt").value="";
+}
+</script>
+  </head>
+  <body>
+ <div id="container">
+<div class="header">
+
+<p><h1>Alphatech</h1><nav>
+ <a href="index.html">Home</a>
+   <a href="addtransaction.html">Add Transaction Category</a>
+   <a href="search.html">Search Transactions</a>
+    </nav></p>
+
+</div>
+<div class="addtransbox">
+
+<form id="frm1" action="" method="get">
+
+	<p><input type="date" placeholder="Date" 
+    	name="dt"  class="ip"><p>
+	<p><input type="text"placeholder="Description" 
+   	 name="descp" class="ip"><p>
+<p><select id= "categ" name="cat">
+<option value="Transaction Mode">Transaction Mode</option>
+<option value= "Debit">Debit</option>
+<option value= "Credit">Credit</option>
+</select><p>
+	
+         <p><input type="text"placeholder="Amount" 
+   	 name="amt" class="ip"><p>
+
+ 	<p><input TYPE="button" NAME="button" Value="Add Transaction" onClick="testResults(this.form)" class="btnExample"></p>
+</form>
+
+</div>
+<div class="backdash">
+ <p>Back to<a href="dashboard.html"> Dashboard</a></p>  
+
+</div>
+<p id="demo"></p>
+<div class="footer">
+
+<p>2012-2017 Alphatech All Rights Reserved</p>
+
+</div>
+
+  </body>
+</html>
+
+
+
+
+
