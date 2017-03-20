@@ -28,7 +28,7 @@ function validatePassword(newUserPassword) {
 }
 
 function validateRegistration() {
-	alert("Validating registration");
+	
 	var newUserName = document.getElementById('newUsername').value;
 	var newUserPassword = document.getElementById('newPassword').value;
 	var newUserEmail = document.getElementById('newEmail').value;
