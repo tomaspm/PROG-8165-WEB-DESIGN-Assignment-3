@@ -20,21 +20,22 @@ var ts = JSON.parse(localStorage.getItem('trans'));
 
 <p><h1>Alphatech</h1></p>
 
+
 </div>
 <div class="registerbox">
-
 <p>New User Register Here</p>
+<script type="text/javascript" src="/scripts/validateRegistration.js"></script>
 
-    <form action="" method="get">
+    <form name='Registration' action="" method="get" onSubmit="return validateRegistration()">
 
 
 <p><input type="text" placeholder="Username" 
-    name="fname"  class="ip"><p>
-<p><input type="password"placeholder="Password" 
-    name="lname" class="ip"><p>
+    name="fname" id="newUsername" class="ip" value=""/><p>
+<p><input type="password" placeholder="Password" 
+    name="lname" id="newPassword" class="ip" value=""/><p>
 
 <p><input type="text" placeholder="Email Id" 
-    name="email"  class="ip"><p>
+    name="email"  id="newEmail" class="ip" value=""/><p>
 
  <p><input type="submit" value="Sign Up" class="btnExample"></p>
 
