@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 	<title>Alpahtech</title>
-	<script type="text/javascript" src="loginvalidation.js"></script>
+  <script type="text/javascript" src="loginvalidation.js"></script>
 	
 	<link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
@@ -14,6 +14,7 @@
    
   </head>
   <body>
+ 
  <div id="container">
 <div class="header">
 
@@ -21,15 +22,16 @@
 
 </div>
 
-<div class="loginbox">
+<div id="error" class="loginbox">
 
 
 
-<form name="loginform" onsubmit="return validateForm();" method="post" action="dashboard.html">
+<form name="login" method="get" action="dashboard.html" onsubmit="return validate();">
+
 	<p><input type="text" placeholder="Username" 
-    	name="fname"  class="ip"><p>
+    	name="user"  class="ip"><p>
 	<p><input type="password" placeholder="Password" 
-   	 name="lname" class="ip"><p>
+   	 name="pass" class="ip"><p>
  	<p><input type="submit" value="Sign In" class="btnExample"></p>
 </form>
 
