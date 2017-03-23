@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title>Alpahtech</title>
+	
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+
+
+	<link rel="stylesheet" href="styles/main.css">
+	
+	
+      <script src="js/loginnew.js"></script>
+	 
+	  
+  </head>
+  <body>
+ <div id="container">
+<div class="header">
+
+<p><h1>Alphatech</h1></p>
+
+</div>
+
+<div class="loginbox">
+
+
+
+<form name="myForm" action="dashboard.html" method="get" onsubmit="return ValidateContactForm()"  >
+	<p>User Name<input type="text" placeholder="Username" 
+    	name="fname" id="fname" class="ip" onblur="return ValidateUserName()"><p>
+		<p id="errmsg1" class="err"></p>
+	<p>Password<input type="password" placeholder="Password" 
+   	 name="pwd" class="ip"   onblur="return ValidatePassWord()"  ><p>
+	 	<p id="errmsg2" class="err"></p>
+ 	<p><input type="submit" value="Sign In" class="btnExample"></p>
+</form>
+
+</div>
+<div class="registerbox">
+ <p>New User <a href="registrationnew.html"> Register here</a></p>  
+</div>
+
+<div class="footer">
+
+<p>2012-2017 Alphatech All Rights Reserved</p>
+
+</div>
+
+
+
+
+  </body>
+</html>

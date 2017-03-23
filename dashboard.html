@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+	<title>Alphatech</title>
+ 
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+
+
+	<link rel="stylesheet" href="styles/dash.css">
+ 
+	
+
+  </head>
+  <body>
+<div id="container">
+<div class="header">
+
+<p><h1>Alphatech</h1><nav>
+ <a href="indexnew.html">Home</a>
+   <a href="addtransaction.html">Add Transaction Category</a>
+   <a href="search.html">Search Transactions</a>
+    </nav></p>
+</div>
+
+
+<table >
+  <caption><p>Latest Transactions</p></caption>
+  <thead>
+      <tr>
+          <th width="16%">Date</th>
+          <th width="14%">Description</th>
+          <th width="16%">Mode of Transaction</th>
+          <th width="12%">Amount</th>
+      </tr>
+  </thead>
+      <tbody id="transData"></tbody>
+  </table>
+  
+  
+  
+ <script type="text/javascript">
+
+
+
+
+
+
+var recenttrans = [
+          {
+              date: "2017-02-13",
+              client: "Orbit Solutions",
+              transmode: "Credit",
+              amount:"$ 60.00"
+          },
+          {
+            date: "2017-02-15",
+            client: "Cdat",
+            transmode: "Debit",
+            amount:"$ -80.00"
+          },
+          {
+            date: "2017-02-11",
+            client: "Classic",
+            transmode: "Debit",
+            amount:"$ -75.00"
+          },
+          {
+            date: "2017-01-29",
+            client: "cdat",
+            transmode: "Credit",
+            amount:"$ 55.00"
+          }
+
+      ];
+      var tb = '<tbody>'
+      for(i = 0;i < recenttrans.length; i++){
+         tb+= '<tr>';
+         tb+= '<td>' + recenttrans[i].date + '</td>';
+         tb+= '<td>' + recenttrans[i].client + '</td>';
+          tb+= '<td>' + recenttrans[i].transmode + '</td>';
+          tb+= '<td>' + recenttrans[i].amount + '</td>';
+          tb+= '</tr>';
+      }
+      tb+='</tbody>';
+      document.getElementById('transData').innerHTML = tb;
+
+
+
+	 
+		 
+		 
+		 
+		
+
+
+     
+	  
+</script>
+
+
+
+
+
+
+
+
+<div class="footer">
+
+<p>2012-2017 Alphatech All Rights Reserved</p>
+
+</div>
+
+
+
+</body>
+</html>
